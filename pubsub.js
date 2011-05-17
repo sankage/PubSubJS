@@ -58,10 +58,10 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  *          PubSub.unsubscribe( token );
  *      }, 0)
 **/ 
-var PubSub = {};
-(function(p){
+define(function(){
     "use strict";
     
+    var p = {};
     var messages = {};
     var lastUid = -1;
     
@@ -158,4 +158,5 @@ var PubSub = {};
         }
         return false;
     };
-}(PubSub));
+    return p;
+});
